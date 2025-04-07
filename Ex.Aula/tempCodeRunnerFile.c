@@ -1,0 +1,67 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    /*
+    float notas[3][3];
+
+    for(int i = 0; i < 3; i++){
+        printf("\nAluno %d:\n", i + 1);
+
+        for(int j = 0; j < 3; j++){
+            printf("Digite a nota da matéria %d: ", j + 1);
+            scanf("%f", &notas[i][j]);
+        }
+    }
+    
+
+    printf("\nBoletim completo:\n");
+
+    for(int i = 0; i < 3; i++){
+        printf("\nAluno %d:\n", i + 1);
+
+        for(int j = 0; j < 3; j++){
+            printf("%.1f\n", notas[i][j]);
+        }
+    }
+    
+    printf("\nMédia de cada aluno:\n");
+
+    for(int i = 0; i < 3; i++){
+
+        float soma = 0;
+
+        for(int j = 0; j < 3; j++){
+            soma += notas[i][j];
+        }
+
+        float media = soma / 3.0;
+        printf("Aluno %d: %.2f\n", i + 1, media);
+    }
+    */
+
+    char grade[5][3][10];
+
+    char dias[5][10] = {"Segunda", "Terça", "Quarta", "Quinta", "Sexta"};
+
+    for(int i = 0; i < 5; i++){
+        printf("\nDia: %s\n", dias [i][i]);
+
+        for (int j = 0; j < 3; j++){
+            printf ("Digite a disciplina da aula %d: ", j + 1);
+            scanf(" %[^\n]", grade[i][j]);
+        }
+    }
+
+    printf("\nGrade de Horários: \n");
+
+    for(int i = 0; i < 5; i++){
+        printf("\n%s:\n", dias[i]);
+
+        for(int j = 0; j < 3; j++){
+            printf(" Aula %d: %s\n", j + 1, grade[i][j]);
+        }
+    }
+
+}
